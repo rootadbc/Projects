@@ -20,4 +20,9 @@ BridgeX is designed to remove that friction by offering a clearer path from cryp
 
 At a high level, users deposit stablecoins, the funds are converted into Naira through approved partners, the investment is placed with a licensed institution, and the user receives a digital record of their holdings, with room for future tokenized receipts.
 
-Here for progress: https://rootadbc.github.io/Projects/Startup/BridgeX/docs/progress.md
+
+## Project documentation
+
+- Progress log:  https://rootadbc.github.io/Projects/Startup/BridgeX/docs/progress.md
+- Public roadmap: https://rootadbc.github.io/Projects/Startup/BridgeX/docs/public-roadmap.md
+
