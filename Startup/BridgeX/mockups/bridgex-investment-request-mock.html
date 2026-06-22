@@ -1,1 +1,846 @@
 
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BridgeX investment request mock</title>
+  <link rel="preconnect" href="https://api.fontshare.com" />
+  <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700,900&display=swap" />
+  <style>
+    :root, [data-theme="light"] {
+      --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+      --text-sm: clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
+      --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+      --text-lg: clamp(1.125rem, 1rem + 0.75vw, 1.5rem);
+      --text-xl: clamp(1.5rem, 1.2rem + 1.25vw, 2.25rem);
+      --space-1: 0.25rem;
+      --space-2: 0.5rem;
+      --space-3: 0.75rem;
+      --space-4: 1rem;
+      --space-5: 1.25rem;
+      --space-6: 1.5rem;
+      --space-8: 2rem;
+      --space-10: 2.5rem;
+      --space-12: 3rem;
+      --space-16: 4rem;
+      --color-bg: #f7f6f2;
+      --color-surface: #f9f8f5;
+      --color-surface-2: #fbfbf9;
+      --color-surface-offset: #f3f0ec;
+      --color-surface-accent: color-mix(in oklch, #01696f 6%, #f9f8f5);
+      --color-divider: #dcd9d5;
+      --color-border: #d4d1ca;
+      --color-text: #28251d;
+      --color-text-muted: #6f6c66;
+      --color-text-faint: #9b9892;
+      --color-text-inverse: #f9f8f4;
+      --color-primary: #01696f;
+      --color-primary-hover: #0c4e54;
+      --color-primary-highlight: #cedcd8;
+      --color-success: #437a22;
+      --color-warning: #964219;
+      --radius-sm: 0.375rem;
+      --radius-md: 0.5rem;
+      --radius-lg: 0.75rem;
+      --radius-xl: 1rem;
+      --radius-full: 9999px;
+      --shadow-sm: 0 1px 2px oklch(0.2 0.01 80 / 0.06);
+      --shadow-md: 0 4px 12px oklch(0.2 0.01 80 / 0.08);
+      --shadow-lg: 0 12px 32px oklch(0.2 0.01 80 / 0.12);
+      --font-body: 'Satoshi', 'Inter', sans-serif;
+      --transition-interactive: 180ms cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    [data-theme="dark"] {
+      --color-bg: #171614;
+      --color-surface: #1c1b19;
+      --color-surface-2: #201f1d;
+      --color-surface-offset: #1d1c1a;
+      --color-surface-accent: color-mix(in oklch, #4f98a3 10%, #1c1b19);
+      --color-divider: #262523;
+      --color-border: #393836;
+      --color-text: #cdccca;
+      --color-text-muted: #a6a49f;
+      --color-text-faint: #7d7a75;
+      --color-text-inverse: #2b2a28;
+      --color-primary: #4f98a3;
+      --color-primary-hover: #227f8b;
+      --color-primary-highlight: #313b3b;
+      --color-success: #6daa45;
+      --color-warning: #bb653b;
+      --shadow-sm: 0 1px 2px oklch(0 0 0 / 0.2);
+      --shadow-md: 0 4px 12px oklch(0 0 0 / 0.3);
+      --shadow-lg: 0 12px 32px oklch(0 0 0 / 0.4);
+    }
+
+    * { box-sizing: border-box; }
+    html, body { height: 100%; margin: 0; overflow: hidden; }
+    body {
+      min-height: 100dvh;
+      font-family: var(--font-body);
+      font-size: var(--text-base);
+      line-height: 1.5;
+      color: var(--color-text);
+      background: var(--color-bg);
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+    button, input, select, textarea { font: inherit; color: inherit; }
+    a, button, input, select, textarea {
+      transition: color var(--transition-interactive), background var(--transition-interactive), border-color var(--transition-interactive), box-shadow var(--transition-interactive), transform var(--transition-interactive);
+    }
+    button { cursor: pointer; }
+    :focus-visible {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 3px;
+      border-radius: var(--radius-sm);
+    }
+
+    .app {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      grid-template-rows: auto 1fr;
+      height: 100dvh;
+    }
+
+    .sidebar {
+      grid-row: 1 / -1;
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-8);
+      padding: var(--space-6);
+      background: var(--color-surface);
+      border-right: 1px solid color-mix(in oklab, var(--color-text) 12%, transparent);
+      overflow-y: auto;
+      overscroll-behavior: contain;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+      font-size: var(--text-sm);
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .brand-mark {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      display: grid;
+      place-items: center;
+      background: var(--color-primary-highlight);
+      color: var(--color-primary);
+      box-shadow: inset 0 0 0 1px color-mix(in oklab, var(--color-primary) 18%, transparent);
+    }
+
+    .nav-group { display: grid; gap: var(--space-2); }
+    .nav-label {
+      font-size: var(--text-xs);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--color-text-faint);
+      margin-bottom: var(--space-2);
+    }
+    .nav-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-3);
+      padding: 0.85rem 0.95rem;
+      border-radius: var(--radius-lg);
+      border: 1px solid transparent;
+      color: var(--color-text-muted);
+      background: transparent;
+      text-align: left;
+    }
+    .nav-item.active {
+      background: var(--color-surface-accent);
+      color: var(--color-text);
+      border-color: color-mix(in oklab, var(--color-primary) 18%, transparent);
+    }
+    .nav-item:hover { background: var(--color-surface-offset); color: var(--color-text); }
+    .nav-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: currentColor;
+      opacity: 0.7;
+    }
+
+    .sidebar-footer {
+      margin-top: auto;
+      padding: var(--space-4);
+      border-radius: var(--radius-xl);
+      background: var(--color-surface-offset);
+      border: 1px solid color-mix(in oklab, var(--color-text) 10%, transparent);
+      box-shadow: var(--shadow-sm);
+    }
+    .sidebar-footer p { margin: 0; color: var(--color-text-muted); font-size: var(--text-sm); }
+
+    .header {
+      grid-column: 2;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-4);
+      padding: var(--space-5) var(--space-6);
+      border-bottom: 1px solid color-mix(in oklab, var(--color-text) 10%, transparent);
+      background: color-mix(in oklab, var(--color-bg) 88%, transparent);
+      backdrop-filter: blur(14px);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: var(--text-xl);
+      line-height: 1.1;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+    }
+
+    .header-copy p, .muted { color: var(--color-text-muted); }
+    .header-copy p { margin: var(--space-1) 0 0; font-size: var(--text-sm); }
+
+    .header-actions { display: flex; align-items: center; gap: var(--space-3); }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-2);
+      padding: 0.45rem 0.7rem;
+      border-radius: var(--radius-full);
+      font-size: var(--text-xs);
+      background: var(--color-surface-offset);
+      border: 1px solid color-mix(in oklab, var(--color-text) 10%, transparent);
+      color: var(--color-text-muted);
+    }
+
+    .chip-status {
+      background: color-mix(in oklab, var(--color-success) 12%, var(--color-surface));
+      color: var(--color-success);
+      border-color: color-mix(in oklab, var(--color-success) 20%, transparent);
+    }
+
+    .icon-btn, .secondary-btn, .primary-btn {
+      min-height: 44px;
+      border-radius: var(--radius-lg);
+      border: 1px solid color-mix(in oklab, var(--color-text) 10%, transparent);
+      background: var(--color-surface);
+      padding: 0.8rem 1rem;
+      box-shadow: var(--shadow-sm);
+    }
+    .icon-btn { width: 44px; padding: 0; display: grid; place-items: center; }
+    .secondary-btn:hover, .icon-btn:hover { background: var(--color-surface-offset); }
+    .primary-btn {
+      background: var(--color-primary);
+      border-color: transparent;
+      color: var(--color-text-inverse);
+      font-weight: 700;
+    }
+    .primary-btn:hover { background: var(--color-primary-hover); transform: translateY(-1px); }
+
+    .main {
+      grid-column: 2;
+      overflow-y: auto;
+      overscroll-behavior: contain;
+      padding: var(--space-6);
+    }
+
+    .hero {
+      display: grid;
+      gap: var(--space-6);
+      margin-bottom: var(--space-6);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.35fr) minmax(320px, 0.95fr);
+      gap: var(--space-6);
+      align-items: start;
+    }
+
+    .card {
+      background: var(--color-surface);
+      border: 1px solid color-mix(in oklab, var(--color-text) 10%, transparent);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .hero-panel {
+      padding: clamp(1.5rem, 2vw, 2rem);
+      display: grid;
+      gap: var(--space-6);
+      background:
+        radial-gradient(circle at top right, color-mix(in oklab, var(--color-primary) 8%, transparent), transparent 42%),
+        var(--color-surface);
+    }
+
+    .eyebrow {
+      font-size: var(--text-xs);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--color-text-faint);
+    }
+
+    .hero-panel h2 {
+      margin: 0;
+      font-size: var(--text-xl);
+      line-height: 1.05;
+      letter-spacing: -0.035em;
+      max-width: 14ch;
+    }
+
+    .hero-panel p { margin: 0; color: var(--color-text-muted); max-width: 58ch; }
+
+    .hero-metrics {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: var(--space-4);
+    }
+
+    .metric {
+      padding: var(--space-4);
+      border-radius: var(--radius-lg);
+      background: var(--color-surface-offset);
+      border: 1px solid color-mix(in oklab, var(--color-text) 9%, transparent);
+    }
+    .metric-label { font-size: var(--text-xs); color: var(--color-text-faint); text-transform: uppercase; letter-spacing: 0.08em; }
+    .metric-value {
+      margin-top: var(--space-2);
+      font-size: var(--text-lg);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      font-variant-numeric: tabular-nums lining-nums;
+    }
+    .metric-meta { margin-top: var(--space-1); font-size: var(--text-sm); color: var(--color-text-muted); }
+
+    .queue {
+      padding: var(--space-5);
+      display: grid;
+      gap: var(--space-4);
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-4);
+      margin-bottom: var(--space-2);
+    }
+    .section-title h3 {
+      margin: 0;
+      font-size: var(--text-lg);
+      letter-spacing: -0.02em;
+    }
+    .section-title p { margin: var(--space-1) 0 0; color: var(--color-text-muted); font-size: var(--text-sm); }
+
+    .queue-item {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: var(--space-4);
+      align-items: start;
+      padding: var(--space-4);
+      border-radius: var(--radius-lg);
+      background: var(--color-surface-offset);
+      border: 1px solid color-mix(in oklab, var(--color-text) 9%, transparent);
+    }
+    .queue-marker {
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      background: var(--color-surface);
+      border: 1px solid color-mix(in oklab, var(--color-text) 10%, transparent);
+      font-size: var(--text-sm);
+      font-weight: 700;
+      color: var(--color-primary);
+    }
+    .queue-item h4 { margin: 0 0 var(--space-1); font-size: var(--text-base); }
+    .queue-item p { margin: 0; color: var(--color-text-muted); font-size: var(--text-sm); }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.85fr);
+      gap: var(--space-6);
+      align-items: start;
+    }
+
+    .panel {
+      padding: clamp(1.25rem, 1.5vw, 1.6rem);
+      display: grid;
+      gap: var(--space-5);
+    }
+
+    .steps {
+      display: flex;
+      gap: var(--space-3);
+      flex-wrap: wrap;
+    }
+    .step-pill {
+      padding: 0.5rem 0.85rem;
+      border-radius: var(--radius-full);
+      font-size: var(--text-xs);
+      border: 1px solid color-mix(in oklab, var(--color-text) 10%, transparent);
+      background: var(--color-surface-offset);
+      color: var(--color-text-muted);
+    }
+    .step-pill.current {
+      background: var(--color-primary-highlight);
+      border-color: color-mix(in oklab, var(--color-primary) 18%, transparent);
+      color: var(--color-primary);
+      font-weight: 700;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: var(--space-4);
+    }
+    .field { display: grid; gap: var(--space-2); }
+    .field.full { grid-column: 1 / -1; }
+    label {
+      font-size: var(--text-sm);
+      font-weight: 700;
+    }
+    input, select, textarea {
+      width: 100%;
+      min-height: 48px;
+      padding: 0.9rem 0.95rem;
+      border-radius: var(--radius-lg);
+      border: 1px solid color-mix(in oklab, var(--color-text) 12%, transparent);
+      background: var(--color-surface-2);
+      box-shadow: inset 0 1px 0 color-mix(in oklab, var(--color-text) 4%, transparent);
+    }
+    textarea { min-height: 120px; resize: vertical; }
+    input::placeholder, textarea::placeholder { color: var(--color-text-faint); }
+
+    .helper-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-3);
+      font-size: var(--text-xs);
+      color: var(--color-text-muted);
+    }
+
+    .notice {
+      padding: var(--space-4);
+      border-radius: var(--radius-lg);
+      background: var(--color-surface-offset);
+      border: 1px solid color-mix(in oklab, var(--color-warning) 16%, transparent);
+      display: flex;
+      gap: var(--space-3);
+      align-items: start;
+    }
+    .notice strong { display: block; margin-bottom: 0.15rem; }
+    .notice span { color: var(--color-text-muted); font-size: var(--text-sm); }
+
+    .actions {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-4);
+      flex-wrap: wrap;
+      padding-top: var(--space-2);
+      border-top: 1px solid color-mix(in oklab, var(--color-text) 8%, transparent);
+    }
+
+    .stack { display: grid; gap: var(--space-4); }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: var(--space-4);
+      align-items: start;
+    }
+    .timeline-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      margin-top: 0.35rem;
+      background: var(--color-primary);
+      box-shadow: 0 0 0 6px color-mix(in oklab, var(--color-primary) 14%, transparent);
+    }
+    .timeline-item h4 { margin: 0 0 var(--space-1); font-size: var(--text-base); }
+    .timeline-item p { margin: 0; color: var(--color-text-muted); font-size: var(--text-sm); }
+
+    .summary-grid {
+      display: grid;
+      gap: var(--space-3);
+    }
+    .summary-row {
+      display: flex;
+      justify-content: space-between;
+      gap: var(--space-4);
+      padding: 0.85rem 0;
+      border-bottom: 1px solid color-mix(in oklab, var(--color-text) 7%, transparent);
+      font-size: var(--text-sm);
+    }
+    .summary-row strong { font-weight: 700; }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-2);
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.4rem 0.7rem;
+      border-radius: var(--radius-full);
+      font-size: var(--text-xs);
+      background: var(--color-surface-offset);
+      color: var(--color-text-muted);
+      border: 1px solid color-mix(in oklab, var(--color-text) 8%, transparent);
+    }
+
+    .footer-note {
+      font-size: var(--text-xs);
+      color: var(--color-text-faint);
+      line-height: 1.6;
+    }
+
+    @media (max-width: 1180px) {
+      .app { grid-template-columns: 88px 1fr; }
+      .sidebar-copy, .nav-label, .nav-item span:last-child, .sidebar-footer { display: none; }
+      .brand { justify-content: center; }
+      .nav-item { justify-content: center; padding-inline: 0; }
+    }
+
+    @media (max-width: 900px) {
+      html, body { overflow: auto; }
+      .app {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 1fr;
+        height: auto;
+      }
+      .sidebar {
+        grid-row: auto;
+        grid-column: 1;
+        flex-direction: row;
+        align-items: center;
+        gap: var(--space-4);
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding: var(--space-4);
+      }
+      .nav-group { display: flex; gap: var(--space-2); }
+      .nav-item { min-width: max-content; padding-inline: 0.95rem; }
+      .header, .main { grid-column: 1; }
+      .hero-grid, .content-grid, .form-grid, .hero-metrics { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 640px) {
+      .header {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .header-actions, .actions { flex-direction: column; align-items: stretch; }
+      .queue-item { grid-template-columns: auto 1fr; }
+      .queue-item .chip { grid-column: 2; justify-self: start; }
+      .main { padding: var(--space-4); }
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" aria-label="Primary navigation">
+      <div class="brand">
+        <div class="brand-mark" aria-label="BridgeX logo">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+            <path d="M4 8.5h7.5L20 4v5.5L12 14H4z"></path>
+            <path d="M4 15.5h7.5L20 20v-5.5L12 10H4z"></path>
+          </svg>
+        </div>
+        <div class="sidebar-copy">
+          <div>BridgeX</div>
+          <div class="muted" style="font-size: var(--text-xs);">Ops dashboard mock</div>
+        </div>
+      </div>
+
+      <div class="nav-group">
+        <div class="nav-label">Workspace</div>
+        <button class="nav-item active"><span class="nav-dot"></span><span>Investment requests</span></button>
+        <button class="nav-item"><span class="nav-dot"></span><span>Portfolio ledger</span></button>
+        <button class="nav-item"><span class="nav-dot"></span><span>Receipts</span></button>
+      </div>
+
+      <div class="nav-group">
+        <div class="nav-label">Operations</div>
+        <button class="nav-item"><span class="nav-dot"></span><span>Conversions</span></button>
+        <button class="nav-item"><span class="nav-dot"></span><span>Status updates</span></button>
+        <button class="nav-item"><span class="nav-dot"></span><span>Audit trail</span></button>
+      </div>
+
+      <div class="sidebar-footer">
+        <p><strong>Public mock</strong><br />Shows a safe MVP direction without exposing partner, compliance, or settlement details.</p>
+      </div>
+    </aside>
+
+    <header class="header">
+      <div class="header-copy">
+        <div class="chip chip-status">MVP view · manual workflow</div>
+        <h1>Investment request intake</h1>
+        <p>A calm operator surface for reviewing incoming stablecoin-funded investment requests.</p>
+      </div>
+      <div class="header-actions">
+        <div class="chip">Updated 6m ago</div>
+        <button class="icon-btn" data-theme-toggle aria-label="Switch theme">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        <button class="secondary-btn">Save draft</button>
+        <button class="primary-btn">Submit request</button>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="hero">
+        <div class="hero-grid">
+          <div class="card hero-panel">
+            <div>
+              <div class="eyebrow">BridgeX MVP</div>
+              <h2>Move from stablecoin balance to regulated local yield.</h2>
+            </div>
+            <p>This mock focuses on the cleanest visible slice of the product: investor intake, instrument choice, and order tracking language that a future production workflow could support.</p>
+            <div class="hero-metrics">
+              <div class="metric">
+                <div class="metric-label">Pending review</div>
+                <div class="metric-value">14 requests</div>
+                <div class="metric-meta">Across treasury bills and funds</div>
+              </div>
+              <div class="metric">
+                <div class="metric-label">Last intake</div>
+                <div class="metric-value">USDT 5,000</div>
+                <div class="metric-meta">Mapped to NGN quote window</div>
+              </div>
+              <div class="metric">
+                <div class="metric-label">Average review time</div>
+                <div class="metric-value">18 min</div>
+                <div class="metric-meta">Manual ops target</div>
+              </div>
+            </div>
+          </div>
+
+          <aside class="card queue">
+            <div class="section-title">
+              <div>
+                <h3>Current queue</h3>
+                <p>What the ops team needs to look at first.</p>
+              </div>
+              <div class="chip">3 items hot</div>
+            </div>
+
+            <div class="queue-item">
+              <div class="queue-marker">1</div>
+              <div>
+                <h4>T-Bill request waiting for funding confirmation</h4>
+                <p>Investor selected a 91-day instrument and uploaded source wallet details.</p>
+              </div>
+              <div class="chip">Needs review</div>
+            </div>
+
+            <div class="queue-item">
+              <div class="queue-marker">2</div>
+              <div>
+                <h4>Money market order ready for rate quote</h4>
+                <p>Internal check complete. Next action is conversion pricing and confirmation.</p>
+              </div>
+              <div class="chip">Quote window</div>
+            </div>
+
+            <div class="queue-item">
+              <div class="queue-marker">3</div>
+              <div>
+                <h4>Redemption request awaiting settlement note</h4>
+                <p>Client asked for maturity-side visibility and proof of processed instruction.</p>
+              </div>
+              <div class="chip">Follow-up</div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="content-grid" aria-label="Request form and review panels">
+        <section class="card panel">
+          <div class="section-title">
+            <div>
+              <h3>New investment request</h3>
+              <p>Compact, guided intake for a manual-first MVP.</p>
+            </div>
+            <div class="steps">
+              <span class="step-pill current">1. Investor</span>
+              <span class="step-pill">2. Funding</span>
+              <span class="step-pill">3. Instrument</span>
+              <span class="step-pill">4. Review</span>
+            </div>
+          </div>
+
+          <div class="form-grid">
+            <div class="field">
+              <label for="fullName">Investor name</label>
+              <input id="fullName" type="text" value="Temitayo Adebisi" />
+            </div>
+            <div class="field">
+              <label for="email">Email address</label>
+              <input id="email" type="email" value="founder@bridgex.app" />
+            </div>
+            <div class="field">
+              <label for="wallet">Funding asset</label>
+              <select id="wallet">
+                <option>USDT</option>
+                <option>USDC</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="amount">Deposit amount</label>
+              <input id="amount" type="text" value="5,000" />
+            </div>
+            <div class="field">
+              <label for="instrument">Investment product</label>
+              <select id="instrument">
+                <option>91-day Treasury Bill</option>
+                <option>182-day Treasury Bill</option>
+                <option>Government bond</option>
+                <option>Money market fund</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="risk">Risk preference</label>
+              <select id="risk">
+                <option>Preserve capital</option>
+                <option>Moderate income</option>
+                <option>Flexible</option>
+              </select>
+            </div>
+            <div class="field full">
+              <label for="notes">Investor note</label>
+              <textarea id="notes" placeholder="Any maturity preference, funding timing note, or support context">Wants a short-duration product with clear maturity visibility and digital proof of ownership.</textarea>
+            </div>
+          </div>
+
+          <div class="helper-row">
+            <span>Estimated manual review: within one business day</span>
+            <span>Quote validity: 15 minutes after confirmation</span>
+          </div>
+
+          <div class="notice">
+            <div class="queue-marker" style="width: 32px; height: 32px; border-radius: 10px;">!</div>
+            <div>
+              <strong>Public-safe mock note</strong>
+              <span>This screen intentionally avoids naming brokers, custodians, OTC desks, or internal settlement logic.</span>
+            </div>
+          </div>
+
+          <div class="actions">
+            <div class="tag-row">
+              <span class="badge">Manual-first</span>
+              <span class="badge">Regulated rails later</span>
+              <span class="badge">Investor receipt flow</span>
+            </div>
+            <div style="display:flex; gap: 0.75rem; flex-wrap: wrap;">
+              <button class="secondary-btn">Preview summary</button>
+              <button class="primary-btn">Create request</button>
+            </div>
+          </div>
+        </section>
+
+        <aside class="stack">
+          <section class="card panel">
+            <div class="section-title">
+              <div>
+                <h3>Request lifecycle</h3>
+                <p>A simple state model for the MVP.</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div>
+                <h4>Intake captured</h4>
+                <p>Investor details, asset choice, and target instrument are logged.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div>
+                <h4>Funding confirmed</h4>
+                <p>The team confirms deposit arrival and prepares the quote window.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div>
+                <h4>Order placed</h4>
+                <p>The investment instruction is moved into execution through approved rails.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div>
+                <h4>Receipt issued</h4>
+                <p>Investor gets a digital record showing the completed purchase state.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="card panel">
+            <div class="section-title">
+              <div>
+                <h3>Review summary</h3>
+                <p>What an operator sees before approval.</p>
+              </div>
+            </div>
+
+            <div class="summary-grid">
+              <div class="summary-row"><span>Client</span><strong>Temitayo Adebisi</strong></div>
+              <div class="summary-row"><span>Funding rail</span><strong>USDT</strong></div>
+              <div class="summary-row"><span>Target product</span><strong>91-day Treasury Bill</strong></div>
+              <div class="summary-row"><span>Status</span><strong>Awaiting final review</strong></div>
+            </div>
+
+            <div class="tag-row">
+              <span class="badge">Diaspora-friendly</span>
+              <span class="badge">Short-duration</span>
+              <span class="badge">Manual confirmation</span>
+            </div>
+
+            <p class="footer-note">This mock is optimized for GitHub showcase use: visible enough to prove product thinking, abstract enough to avoid leaking sensitive infrastructure.</p>
+          </section>
+        </aside>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    (function () {
+      const root = document.documentElement;
+      const toggle = document.querySelector('[data-theme-toggle]');
+      let theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      root.setAttribute('data-theme', theme);
+
+      function renderIcon(mode) {
+        toggle.innerHTML = mode === 'dark'
+          ? '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2.5M12 19.5V22M4.93 4.93l1.77 1.77M17.3 17.3l1.77 1.77M2 12h2.5M19.5 12H22M4.93 19.07l1.77-1.77M17.3 6.7l1.77-1.77"></path></svg>'
+          : '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>';
+        toggle.setAttribute('aria-label', 'Switch to ' + (mode === 'dark' ? 'light' : 'dark') + ' mode');
+      }
+
+      renderIcon(theme);
+      toggle.addEventListener('click', function () {
+        theme = theme === 'dark' ? 'light' : 'dark';
+        root.setAttribute('data-theme', theme);
+        renderIcon(theme);
+      });
+    })();
+  </script>
+</body>
+</html>
