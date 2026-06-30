@@ -1,0 +1,287 @@
+/* Landing page project CSS */
+
+body   *{
+  /* display: flex;
+  flex-direction: column; */
+  
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  /* min-height:100vh */
+  /* border:2px dashed red;   */
+}
+
+/* SECTION 1 */
+
+.one{
+  display:flex;  
+  flex-direction: column;
+  gap:70px;
+  /* border:2px solid red; */
+  background-color: #1f2937;
+}
+
+.header , .header2 {
+  
+  color: white;  
+  margin: 0 150px;
+  /* border:1px solid white; */
+}
+
+.header {
+  display:flex; 
+  justify-content: space-between;
+  
+  
+  /* border:1px solid lime; */
+       
+}
+
+
+.header h3 {
+  
+  /* border: 1px dashed lime; */
+  font-size: 24px;
+  color: #f9faf8;
+     
+}
+
+
+nav ul {
+  display:flex;
+  /* border: 1px dashed lime; */
+  gap:25px;
+  font-size: 18px;
+  color:E5E7EB;
+}
+
+a {
+  text-decoration-line: none;
+  color:#e5e7eb;
+  
+}
+
+ul{
+  list-style-type: none;
+  
+}
+
+
+.header2 {
+
+  height: auto;
+  display:flex;
+  margin-bottom:70px;
+  gap:40px;
+  /* border:2px solid white */
+  
+}
+
+
+
+
+.head-left > h2 {
+
+  font-size: 48px;
+  color:#f9faf8;
+  font-weight: 900;
+  word-wrap: wrap;
+  margin:0;
+  
+  
+  
+  /* border:1px solid lime; */
+}
+
+
+
+.head-left > span {
+  line-height: 1.5;
+  font-size: 18px;
+  text-wrap: wrap;
+  
+  
+  /* border:1px solid lime; */
+}
+
+.head-left  button {
+  margin-top:10px;
+  margin-bottom: 0px;
+  border-radius: 10px;  
+  height: 40px;
+  width:120px;
+  background-color: #3882f6 ;
+  font-size: 16px;
+  color:white;
+    /* border:2px solid white; */
+  
+}
+
+/* .head-left > h2 , span , button {
+  margin: 0;
+  padding: 5px;
+  
+} */
+
+.head-right {
+  
+  background-color: grey ;
+  width:90%;
+  
+}
+
+.head-right > p {
+  text-align: center;
+  padding:100px;
+  font-size: 17px;
+  color:#e5e7eb 
+  
+  
+  
+  
+  
+  /* border:1px solid lime; */
+}
+
+/* SECTION 2 */
+
+.two {
+margin: 50px;
+  
+  
+}
+
+.two > .title {
+  /* padding-top: 50px; */
+  font-weight: 900;  
+  font-size: 36px;
+  color: #1F2937;
+  text-align: center;
+}
+
+.two-body {
+  display:flex;
+  justify-content: center;
+  gap:30px;
+  padding:50px;
+  /* border:1px solid blue; */
+}
+
+.body .rectangle {
+  
+  height:150px;
+  width:auto;
+  border-radius: 16px;
+  border:4px solid #3882f6;
+}
+.body {
+  text-align:center;
+  text-wrap: wrap;
+  max-width: 180px;
+  /* border:1px solid greenyellow; */
+}
+
+
+/* SECTION 3 */
+
+.three {
+
+  background-color: #e5e7eb;
+  padding:50px;
+  /* border:2px solid red; */
+}
+
+blockquote {
+  font-size: 36px;
+  color: #1F2937;
+  font-weight: 300;
+  font-style: italic;
+  word-wrap: wrap;
+  padding:20px 140px;  
+  /* border: 1px solid lime; */
+}
+
+blockquote > footer {
+  font-size: 25px;
+  font-weight: 550;  
+  text-align: right;
+  font-style: normal;
+  color:black;
+  padding: 0;
+  /* border: 1px solid lime; */
+}
+
+
+
+
+/* SECTION 4 */
+
+.four {
+  display:flex;
+  justify-content: space-around;
+  margin:90px 160px;
+  background-color: #3882f6;
+  border-radius: 10px;
+  padding: 40px 0px;
+  /* border:2px solid red; */
+}
+
+.four-left {
+  
+  
+}
+
+.four-left > h3 , p {
+  margin:0;
+  padding:1px;
+}
+
+
+
+.four h3 {
+  font-size: 24px;
+  color: white;
+}
+
+.four p{
+  font-size: 16px;
+  color: white;
+}
+
+.button {
+  align-self: center;
+  
+  
+  
+}
+
+.four button {
+  border-radius:10px;
+  width:130px;
+  height: 30px;
+  background-color: #3882f6;
+  font-size: 16px;
+  color: white;
+  border:2px solid white;
+  
+   
+
+}
+
+
+
+/* SECTION END */
+
+
+.foot {
+  height:100px;
+  background-color: #1f2937;
+  
+}
+
+footer {
+  
+  color: whitesmoke;
+  text-align: center;
+  padding:40px;
+  font-size: 18px;
+  /* border:2px solid lime; */
+}

@@ -1,0 +1,149 @@
+* ,
+*::before,
+*::after {
+box-sizing: border-box;
+}
+
+/* universal settings */
+
+*{
+   background-color:#FFE6EA;
+   padding:auto;
+   margin: 10px;
+      
+}
+
+/* universal body frame */
+
+#frame {
+border: 2.5px dashed black;
+
+}
+
+/* <----------title section ---------->*/
+
+.title.home > h1, .title.egusi > h1 , .title.jollof > h1 , .title.dodo > h1 {
+
+    text-align: center;
+    font-size: 70px;
+    margin: 30px;
+    font-family: "Brush Script MT",'Times New Roman', Times, serif  ;
+    color: white;
+}
+
+a {
+ /* this removes the line under our links */
+  text-decoration: none;
+  color:black;
+}
+/* <----------home menu section ---------->*/
+/* menu container */
+.recipe.menu_list {
+
+ display: flex;
+ /* flex-direction: row;  - flex ( is row by default ) */
+ justify-content: space-evenly;
+ 
+ 
+ 
+}
+
+
+
+/* menu list */
+.recipe.menu_list > h3{
+
+ font-size: x-large;
+ color: black;
+ border: 5px outset white;
+ text-align: center;
+ 
+}
+
+
+
+
+/* <----------button section  ---------->*/
+
+/* home */
+.home_button {
+ 
+ 
+ font-size: x-large;
+ /* color: black; */
+ border: 5px outset white;
+ text-align: center;
+
+}
+
+
+/* <----------image section ---------->*/
+
+.image {
+   padding: auto;
+   text-align: center;
+   border: white 10px solid ;
+   margin-bottom: 30px;
+
+
+
+}
+
+/* <----------description section ---------->*/
+
+/* title */
+
+.description.title_egusi h3, .description.title_dodo h3 ,.description.title_jollof h3 {
+
+border: 3px dotted white;
+    text-align: center;
+    font-size: x-large;
+}
+
+/* <----------ingredient section ---------->*/
+
+/* unordered list */
+
+.ingredient.jollof_list ul,
+.ingredient.egusi_list ul,
+.ingredient.dodo_list ul
+{
+
+border: 5px ridge white;
+
+
+}
+
+
+/* title */
+.ingredient.egusi_title h3 
+, .ingredient.jollof_title h3
+, .ingredient.dodo_title h3 {
+
+    border: 3px dotted white;
+    text-align: center;
+    font-size: x-large;
+}
+
+
+/* <----------step section ---------->*/
+
+/* title */
+.steps.egusi_title p
+, .steps.jollof_title p ,
+.steps.dodo_title p 
+{
+text-align: center;
+font-size: x-large;
+border: 3px dotted white;
+
+}
+
+/* ordered list */
+.steps.list_egusi ol,
+.steps.list_dodo ol,
+.steps.list_jollof ol {
+
+    border: 5px ridge white;
+
+}

@@ -1,0 +1,272 @@
+/* =========
+   Reset
+========= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  background-color: #f5f1e8;
+  opacity: 0.95;
+  color: #222222;
+
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+    url("../images/lib.png") center / cover no-repeat fixed;
+}
+
+/* Debug only — uncomment when needed */
+/* * {
+  outline: 1px solid red;
+} */
+
+/* =========
+   Layout
+========= */
+.overlay-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10rem;
+  padding: 5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* =========
+   Sections
+========= */
+
+.book-section,
+.add-book-section {
+  background: rgba(188, 160, 2, 0.198);
+
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(3, 3, 3, 0.863);
+}
+
+/* =========
+   Dialog box
+========= */
+
+dialog {
+  border: none;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 6px 18px rgba(3, 3, 3, 0.863);
+  background: #f5f1e8;
+  opacity: 0.95;
+  width: 90%;
+  max-width: 500px;
+}
+
+/* dialog::backdrop {
+    
+} */
+
+/* =========
+   Dialog Open buttons
+========= */
+
+#openBtn {
+  margin: 2rem auto;
+  display: block;
+  padding: 0.85rem 1.2rem;
+  border: none;
+  border-radius: 20px;
+  background: #e2e3df;
+  box-shadow: 0 2px 48px rgb(146, 48, 2);
+  opacity: 0.6;
+  color: rgb(16, 1, 1);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* =========
+   Dialog Animating
+========= */
+
+dialog:open {
+  opacity: 1;
+  transform: scaleY(1);
+}
+
+dialog {
+  opacity: 1;
+  transform: scaleY(0);
+  transition:
+    opacity 0.7s ease-out,
+    transform 0.7s ease-out,
+    overlay 0.7s ease-out allow-discrete,
+    display 0.7s ease-out allow-discrete;
+}
+
+@starting-style {
+  dialog:open {
+    opacity: 0;
+    transform: scaleY(0);
+  }
+}
+
+/* =========
+   Dialog Close buttons
+========= */
+
+#closeBtn {
+  margin-top: 1rem;
+  padding: 0.85rem 1.2rem;
+  border: none;
+  border-radius: 10px;
+  background: #d9d9d9;
+  box-shadow: 0 2px 8px rgb(146, 48, 2);
+  color: #222;
+  cursor: pointer;
+  display: block;
+  justify-self: center;
+  width: 100%;
+  font-size: larger;
+  font-weight: 600;
+}
+
+/* =========
+   Book grid
+========= */
+
+.book-section h2 {
+  margin-top: 0;
+  font-size: 1.8rem;
+  color: #f6f2f2;
+  justify-self: center;
+}
+
+#book-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.book-card {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background: #fffdf9;
+  box-shadow: 0 2px 8px rgb(246, 246, 243);
+}
+
+/* =========
+   Form
+========= */
+
+.add-book-section h2 {
+  margin-top: 0;
+  font-size: 1.8rem;
+  color: #070707;
+  justify-self: center;
+}
+
+.book-form fieldset {
+  border: 1px solid #d8d1c43e;
+  border-radius: 12px;
+  padding: 1rem;
+  margin: 0 0 1rem;
+}
+
+.book-form legend {
+  font-weight: bold;
+  padding: 0 0.5rem;
+  font-size: 1.4rem;
+  color: #020101;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.book-form label {
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+  color: #020202;
+}
+
+.book-form input[type="text"],
+.book-form input[type="number"] {
+  padding: 0.85rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+/* Radio Group */
+
+.reading_status div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Button Area */
+.buttonArea {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.buttonArea button {
+  padding: 0.85rem 1.2rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.buttonArea button[type="reset"] {
+  background: #d9d9d9;
+  color: #222;
+}
+
+.buttonArea button[type="submit"] {
+  background: #273602;
+  color: white;
+}
+
+.buttonArea button[type="submit"]:hover {
+  background: #85f067;
+}
+
+.buttonArea button[type="reset"]:hover {
+  background: #ec4e1e;
+}
+
+/* =========
+   Responsive
+========= */
+@media (max-width: 768px) {
+  .overlay-container {
+    padding: 1rem;
+  }
+
+  .search-form {
+    flex-direction: column;
+  }
+
+  .buttonArea {
+    flex-direction: column;
+  }
+
+  .buttonArea button {
+    width: 100%;
+  }
+}
+
+/* =========
+   Dialog box
+========= */

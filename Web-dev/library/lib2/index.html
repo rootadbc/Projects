@@ -1,0 +1,90 @@
+<!-- =======================================================
+     Project : Odin Project - Library
+     File    : index.html
+     Author  : rootadbc
+     Purpose : Main HTML structure for the Library app UI
+     Notes   : Contains dialog form, action button, and books container
+======================================================= -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Library</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Main action button: opens the add-book dialog -->
+  <button id="new-book-btn" type="button">New Book</button>
+
+  <!-- Native dialog used as the modal form -->
+  <dialog id="book-dialog">
+    <form id="new-book-form" class="book-form">
+      <fieldset>
+        <legend>Book Details</legend>
+
+        <!-- Book title -->
+        <div class="form-group">
+          <label for="title">Book Title</label>
+          <input type="text" id="title" name="title" required />
+        </div>
+
+        <!-- Book author -->
+        <div class="form-group">
+          <label for="author">Author Name</label>
+          <input type="text" id="author" name="author" required />
+        </div>
+
+        <!-- Number of pages -->
+        <div class="form-group">
+          <label for="pages">Pages</label>
+          <input type="number" id="pages" name="pages" min="1" required />
+        </div>
+
+        <!-- Read status -->
+        <fieldset class="reading-status">
+          <legend>Reading Status</legend>
+
+          <div>
+            <input
+              type="radio"
+              name="reading_status"
+              id="status-read"
+              value="read"
+              required
+            />
+            <label for="status-read">Read</label>
+          </div>
+
+          <div>
+            <input
+              type="radio"
+              name="reading_status"
+              id="status-not-read"
+              value="not_read"
+            />
+            <label for="status-not-read">Not Read</label>
+          </div>
+        </fieldset>
+
+        <!-- Form action buttons -->
+        <div class="button-area">
+          <button type="reset">Reset</button>
+          <button id="close-dialog-btn" type="button">Close</button>
+          <button type="submit">Add Book</button>
+        </div>
+      </fieldset>
+    </form>
+  </dialog>
+
+  <!-- JavaScript will render all book cards here -->
+  <section id="books-container"></section>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+

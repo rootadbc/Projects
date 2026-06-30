@@ -1,0 +1,66 @@
+<form id="new-book-form">
+  <input name="title" placeholder="Title" required />
+  <input name="author" placeholder="Author" required />
+  <input name="pages" type="number" placeholder="Pages" required />
+  <label>
+    <input name="read" type="checkbox" />
+    Read
+  </label>
+  <button type="submit">Add Book</button>
+</form>
+
+
+<br>
+
+
+<form method="dialog" class="book-form">
+                    <!--- added the method="dialog" attribute --->
+
+
+                    <fieldset>
+                        <legend>Book Details</legend>
+                        <div class="form-group">
+                            <label for="title">Book Title</label>
+                            <input type="text" id="title" name="book_title" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="author">Author Name</label>
+                            <input type="text" id="author" name="author_name" required>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="pages">Pages</label>
+                            <input type="number" id="pages" name="pages" min="0" required>
+                        </div>
+
+                        <fieldset class="reading_status">
+                            <legend>Reading Status</legend>
+
+                            <div>
+                                <input type="radio" name="reading_status" id="status-read" value="read" required>
+                                <label for="status-read">Read</label>
+                            </div>
+
+                            <div>
+                                <input type="radio" name="reading_status" id="status-not-read" value="not_read">
+                                <label for="status-not-read">Not Read</label>
+                            </div>
+                        </fieldset>
+
+                        <div class="buttonArea">
+                            <button type="reset">Reset</button>
+                            <button type="submit">Add Book</button>
+                        </div>
+
+                    </fieldset>
+                </form>
+
+
+
+
+                <br>
+
+
+                

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <main class="overlay-container">
+
+
+        <button id="openBtn" autofocus>
+            Add New Book to Library
+        </button>
+
+
+        <dialog id="dialog" closedby="any"> <!-- --- added the closedby="any" attribute --- -->
+
+            <section class="add-book-section" aria-labelledby="add-book-heading">
+                <h2 id="add-book-heading">Add To Library</h2>
+
+                <form method="dialog" class="book-form">
+                    <!--- added the method="dialog" attribute --->
+
+
+                    <fieldset>
+                        <legend>Book Details</legend>
+                        <div class="form-group">
+                            <label for="title">Book Title</label>
+                            <input type="text" id="title" name="book_title" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="author">Author Name</label>
+                            <input type="text" id="author" name="author_name" required>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="pages">Pages</label>
+                            <input type="number" id="pages" name="pages" min="0" required>
+                        </div>
+
+                        <fieldset class="reading_status">
+                            <legend>Reading Status</legend>
+
+                            <div>
+                                <input type="radio" name="reading_status" id="status-read" value="read" required>
+                                <label for="status-read">Read</label>
+                            </div>
+
+                            <div>
+                                <input type="radio" name="reading_status" id="status-not-read" value="not_read">
+                                <label for="status-not-read">Not Read</label>
+                            </div>
+                        </fieldset>
+
+                        <div class="buttonArea">
+                            <button type="reset">Reset</button>
+                            <button type="submit">Add Book</button>
+                        </div>
+
+                    </fieldset>
+                </form>
+
+            </section>
+
+            <button id="closeBtn" autofocus>Close</button>
+
+        </dialog>
+
+        
+
+        <div class="book-section" aria-labelledby="book-list-heading">
+
+            <h2 id="book-list-heading">Book List</h2>
+
+            <div id="book-list">
+
+                <article class="book-card">
+                    <!-- <h3 class="title">Book Title</h3>
+                    <p class="author"><strong>Author:</strong> Author Name</p>
+                    <p class="pages"><strong>Pages:</strong> Page Count</p>
+                    <p class="read"><strong>Status:</strong> Read/Not Read</p> -->
+                </article>
+
+                <article class="book-card">
+                    <!-- <h3 class="title">Book Title</h3>
+                    <p class="author"><strong>Author:</strong> Author Name</p>
+                    <p class="pages"><strong>Pages:</strong> Page Count</p>
+                    <p class="read"><strong>Status:</strong> Read/Not Read</p> -->
+                </article>
+
+                <article class="book-card">
+                    <!-- <h3 class="title">Book Title</h3>
+                    <p class="author"><strong>Author:</strong> Author Name</p>
+                    <p class="pages"><strong>Pages:</strong> Page Count</p>
+                    <p class="read"><strong>Status:</strong> Read/Not Read</p> -->
+                </article>
+
+            </div>
+
+        </div>
+
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

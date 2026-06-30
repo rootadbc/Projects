@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <!-- Make it look good on mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>Basic Calculator</title>
+
+    <!-- Link external CSS file -->
+    <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+    <!-- Calculator wrapper -->
+    <div class="calculator">
+        <!-- Display screen (readonly so user can't type directly) -->
+        <input type="text" class="display" id="display" readonly />
+
+        <!-- All buttons in a grid -->
+        <div class="buttons">
+            <!-- Top row: clear, delete, divide, multiply -->
+            <button class="clear" onclick="clearDisplay()">C</button>
+            <button onclick="deleteLast()">⌫</button>
+            <button class="operator" onclick="appendToDisplay('/')">/</button>
+            <!-- Note: we pass * (operator) even though label is × -->
+            <button class="operator" onclick="appendToDisplay('*')">×</button>
+            
+            <!-- Number row: 7 8 9 - -->
+            <button onclick="appendToDisplay('7')">7</button>
+            <button onclick="appendToDisplay('8')">8</button>
+            <button onclick="appendToDisplay('9')">9</button>
+            <button class="operator" onclick="appendToDisplay('-')">-</button>
+            
+            <!-- Number row: 4 5 6 + -->
+            <button onclick="appendToDisplay('4')">4</button>
+            <button onclick="appendToDisplay('5')">5</button>
+            <button onclick="appendToDisplay('6')">6</button>
+            <button class="operator" onclick="appendToDisplay('+')">+</button>
+            
+            <!-- Number row: 1 2 3 = -->
+            <button onclick="appendToDisplay('1')">1</button>
+            <button onclick="appendToDisplay('2')">2</button>
+            <button onclick="appendToDisplay('3')">3</button>
+            <button onclick="appendToDisplay('.')">.</button> <!-- changed the location from Botton row:0 to Number row:1 2 3-->
+            
+            <!-- Bottom row: 0 spans 2 columns + dot -->
+            <button class="zero" onclick="appendToDisplay('0')">0</button>
+                        
+            <!-- = button spans 2 columns (styled in CSS) -->
+            <button class="equals" onclick="calculate()">=</button>
+            <!-- Removed button "." and moved to Number row: 1 2 3-->
+           
+        </div>
+    </div>
+
+    <!-- Link external JavaScript file (loaded after HTML so elements exist) -->
+    <script src="./script.js"></script>
+</body>
+</html>
