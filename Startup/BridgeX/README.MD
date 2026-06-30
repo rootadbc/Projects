@@ -28,8 +28,9 @@ At a high level, users deposit stablecoins, the funds are converted into Naira t
 
 ## Product mockups
 
-- Investment request UI mock: [ UI mockup](https://rootadbc.github.io/Projects/Startup/BridgeX/mockups/bridgex-index.html}
+- Investment request UI mock: [mockup](https://rootadbc.github.io/Projects/Startup/BridgeX/mockups/bridgex-index.html}
 
 ## Links
-- Medium: [BridgeX](https://bridgexofficial.medium.com/)
-- Linkedln: [BridgeX](https://linkedln/in/bridgex/)
+- Medium: [BridgeXofficial](https://bridgexofficial.medium.com/)
+- Linkedln: [BridgeXofficial](https://www.linkedin.com/company/bridgexoffcial/)
+- X(Twitter): [BridgeXofficial](https://x.com/BridgeXOfficial)
