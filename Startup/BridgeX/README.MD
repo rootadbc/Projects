@@ -32,4 +32,4 @@ At a high level, users deposit stablecoins, the funds are converted into Naira t
 
 ## Links
 - Medium: [BridgeX](https://bridgexofficial.medium.com/)
-- Linkedln: 
+- Linkedln: [BridgeX](https://linkedln/in/bridgex/)
