@@ -6,7 +6,7 @@ BridgeX is a crypto-to-investment bridge that enables users to access Nigerian f
 
 ## Overview
 
-The project is built around a simple idea: make it easier for diaspora Nigerians, local crypto holders, and cross-border investors to move from digital assets into regulated Nigerian investment products without needing a local bank account.
+The project is being built around a simple idea: make it easier for diaspora Nigerians, local crypto holders, and cross-border investors to move from digital assets into regulated Nigerian investment products without needing a local bank account.
 
 BridgeX connects crypto payment rails with licensed Nigerian financial institutions, handling stablecoin deposits, conversion into Naira through regulated partners, investment execution through brokers or asset managers, and digital proof of ownership for the investor.
 
