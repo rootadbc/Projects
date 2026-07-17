@@ -1,0 +1,61 @@
+/* =============================================================
+     Project : Tic Tac Toe
+     File    : ttt3.js
+     Author  : rootadbc
+     Purpose : Main CSS structure for the Tic Tac Toe app UI
+     Notes   : 
+============================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: #f4f4f4;
+}
+
+main {
+  text-align: center;
+}
+
+.controls {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+#message {
+  min-height: 24px;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+#gameboard {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 5px;
+  justify-content: center;
+}
+
+.cell {
+  background: white;
+  border: 2px solid #333;
+  font-size: 2rem;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+
+
+
+
+
