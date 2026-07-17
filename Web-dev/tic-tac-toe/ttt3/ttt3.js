@@ -85,13 +85,16 @@ const GameController = (() => {
 
   // Starting a brand new game
   const startGame = (name1 = "Player 1", name2 = "Player 2") => {
-    player1 = Player(name1, "X"); // creates player 1 with given nameand mark "X"
-    player2 = Player(name2, "O"); // creates player 2 with given name and mark "O"
-    currentPlayer = player1; // set the first turn to player 1
-    gameOver = false; // reset game , so a new game can began
-    Gameboard.resetBoard(); // clear the board back to empty cells to prepare for the new game
-  };
-  console.log("StartGame: is OK");
+
+      player1 = Player(name1, "X"); // creates player 1 with given nameand mark "X"
+      player2 = Player(name2, "O"); // creates player 2 with given name and mark "O"
+      currentPlayer = player1; // set the first turn to player 1
+      gameOver = false; // reset game , so a new game can began
+      Gameboard.resetBoard(); // clear the board back to empty cells to prepare for the new game
+
+      
+  };  console.log("StartGame: is OK");
+
 
   const getCurrentPlayer = () => currentPlayer; // returns the player whose turn it is right now ( player1 or player2)
 
@@ -112,7 +115,9 @@ const GameController = (() => {
         board[a] !== "" && // ensure the starting cell isn't blank
         board[a] === board[b] && // a and b have the same mark
         board[a] === board[c] // a and c have the same mark
-      ) {
+      ) 
+      
+      {
         return true; // a winning line exists - someone has won
       }
     }
