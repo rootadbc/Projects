@@ -1,0 +1,8 @@
+# No third-party Python packages required.
+# Requires Python 3.10+.
+#
+# Optional system dependency for --nmap functionality:
+# Ubuntu/Debian/Kali: sudo apt install nmap
+# macOS: brew install nmap
+
+colorama==0.4.6
