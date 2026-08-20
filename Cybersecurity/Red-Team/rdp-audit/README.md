@@ -20,7 +20,7 @@ sudo apt install -y python3 python3-venv nmap
 ## Quick Start
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/rdp-audit.git
+git clone https://github.com/rootadbc/Projects/tree/main/Cybersecurity/Red-Team/rdp-audit
 cd rdp-audit
 
 python3 rdp_audit.py --target 192.168.1.10
