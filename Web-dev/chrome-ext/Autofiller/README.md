@@ -1,8 +1,20 @@
 # Autofiller
 
-Autofiller is a Chrome extension that helps you fill repetitive online forms quickly and consistently.
+Autofiller is a Chrome extension that turns repetitive form filling into a simple, repeatable workflow.
 
-It saves you from retyping the same details across job applications, sign-up forms, and other routine web forms—without storing your passwords.
+Instead of retyping the same details across sign-ups, applications, and checkout forms, Autofiller detects fields, applies your saved profile, and lets you review before submitting.
+
+## Workflow
+
+```text
+1. Detect form fields
+        ↓
+2. Save your profile
+        ↓
+3. Autofill with one click
+        ↓
+4. Review and submit
+```
 
 ## Screenshots
 
@@ -10,35 +22,28 @@ It saves you from retyping the same details across job applications, sign-up for
   <tr>
     <td align="center" valign="top">
       <img src="screenshot/form-detect.png" alt="Form detection" width="270"><br>
-      <sub><strong>Form Detection</strong></sub>
+      <sub><strong>1. Detect</strong></sub>
     </td>
     <td align="center" valign="middle">
-      <img src="screenshot/autofill.png" alt="Autofill" width="270"><br>
-      <sub><strong>Autofill</strong></sub>
+      <img src="screenshot/autofill.png" alt="Autofill form" width="270"><br>
+      <sub><strong>2. Autofill</strong></sub>
     </td>
     <td align="center" valign="bottom">
-      <img src="screenshot/image.png" alt="Extension interface" width="270"><br>
-      <sub><strong>Extension</strong></sub>
+      <img src="screenshot/image.png" alt="Autofiller interface" width="270"><br>
+      <sub><strong>3. Manage</strong></sub>
     </td>
   </tr>
 </table>
 
 ## Features
 
-- Detect common form fields automatically
-- Fill saved profile details with one click
-- Support for name, email, phone, address, and custom fields
-- Manage saved profiles from the options page
-- Works entirely in the browser
-- No password storage
-
-## How It Works
-
-1. Open a form.
-2. Click the Autofiller icon.
-3. Choose a saved profile.
-4. Review the suggested values.
-5. Fill the form.
+- Detects common form fields automatically
+- Saves reusable profile details
+- Fills forms with one click
+- Supports name, email, phone, address, and custom fields
+- Manage profiles from the options page
+- Works locally in the browser
+- Does not store passwords
 
 ## Installation
 
