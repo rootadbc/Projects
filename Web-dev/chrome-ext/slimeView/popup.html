@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>slimeView</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body data-theme="system">
+  <main class="app">
+    <header class="topbar">
+      <div class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></div>
+      <div class="brand-copy"><h1>slimeView</h1><p>Make room for what matters</p></div>
+      <span class="local-badge"><i></i> LOCAL</span>
+    </header>
+
+    <section class="intro" aria-labelledby="cleanup-title">
+      <div class="eyebrow">PAGE CONTROLS</div>
+      <h2 id="cleanup-title">A clearer view.</h2>
+      <p>Tap a switch to turn a cleanup on or off.</p>
+    </section>
+
+    <section class="action-list" aria-label="Page cleanup switches">
+      <button class="action-card" id="popups" type="button" role="switch" aria-checked="false" aria-label="Remove pop-ups">
+        <span class="action-icon popup-icon" aria-hidden="true"><span></span></span>
+        <span class="action-copy"><strong>Remove pop-ups</strong><small>Dialogs, banners &amp; overlays</small></span>
+        <span class="switch" aria-hidden="true"><span class="switch-state">OFF</span><span class="switch-thumb"></span></span>
+      </button>
+      <button class="action-card" id="blur" type="button" role="switch" aria-checked="false" aria-label="Remove blur">
+        <span class="action-icon blur-icon" aria-hidden="true"><span></span></span>
+        <span class="action-copy"><strong>Remove blur</strong><small>Clear visual effects on the page</small></span>
+        <span class="switch" aria-hidden="true"><span class="switch-state">OFF</span><span class="switch-thumb"></span></span>
+      </button>
+    </section>
+
+    <section class="appearance" aria-label="Appearance preference">
+      <div class="appearance-copy"><strong>Appearance</strong><small>System is the default</small></div>
+      <div class="theme-picker" role="group" aria-label="Choose appearance">
+        <button type="button" data-theme-choice="system" aria-pressed="true">System</button>
+        <button type="button" data-theme-choice="light" aria-pressed="false">Light</button>
+        <button type="button" data-theme-choice="dark" aria-pressed="false">Dark</button>
+      </div>
+    </section>
+
+    <div class="status-card" aria-live="polite" role="status">
+      <span class="status-dot" aria-hidden="true"></span>
+      <p id="status">Checking this tab…</p>
+    </div>
+    <button id="confirm" class="confirm-button" type="button" hidden>Confirm cleanup</button>
+
+    <div class="utility-actions">
+      <button id="undo" class="utility-button" type="button"><span aria-hidden="true">↶</span> Turn both off &amp; undo</button>
+      <button id="reset" class="utility-button" type="button"><span aria-hidden="true">⟳</span> Reset page</button>
+    </div>
+
+    <section class="creator" aria-label="Author profiles">
+      <span class="creator-label">Made by <strong>rootadbc</strong></span>
+      <nav class="social-links" aria-label="Author links">
+        <a href="https://www.linkedin.com/in/rootadbc/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/rootadbc" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://x.com/rootadbc" target="_blank" rel="noopener noreferrer">X</a>
+        <a href="https://www.instagram.com/rootadbc/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://www.youtube.com/@rootadbc" target="_blank" rel="noopener noreferrer">YouTube</a>
+      </nav>
+    </section>
+
+    <footer class="footer">
+      <span class="shield" aria-hidden="true">◆</span>
+      <p>Appearance only. slimeView doesn’t unlock paid, private, or restricted content.</p>
+    </footer>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>

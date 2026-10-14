@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "Autofiller",
+  "version": "1.0.0",
+  "description": "Manually fill up to five selected form fields from a profile stored locally.",
+  "author": "rootadbc",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "background": { "service_worker": "background/service-worker.js" },
+  "action": { "default_popup": "popup/popup.html", "default_title": "Autofiller" },
+  "options_page": "options/options.html",
+  "icons": { "16": "assets/icon16.png", "32": "assets/icon32.png", "48": "assets/icon48.png", "128": "assets/icon128.png" }
+}

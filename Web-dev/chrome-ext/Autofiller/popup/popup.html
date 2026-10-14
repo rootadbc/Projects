@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Autofiller</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div class="brand-mark" aria-hidden="true"><span>✓</span></div>
+      <div class="brand-copy"><h1>Autofiller</h1><p>Fill forms, stay in control</p></div>
+      <span id="theme-icon" class="theme-icon" aria-label="Following system theme">☼</span>
+    </header>
+
+    <section class="intro"><div class="eyebrow">CURRENT TAB</div><h2>Choose your fields.</h2><p>Select form fields on the page, then map your profile.</p></section>
+
+    <button id="start-selection" class="primary-button" type="button"><span aria-hidden="true">＋</span> Select fields on page <span class="button-hint">UP TO 5</span></button>
+
+    <section class="mapping-section" aria-label="Selected form fields">
+      <div class="section-heading"><h2>Field mapping</h2><span id="field-count">0 / 5</span></div>
+      <div id="mapping-list" class="mapping-list"><p class="empty-state">No fields selected yet. Start selection, then click fields on the page.</p></div>
+    </section>
+
+    <div class="action-row">
+      <button id="fill" class="fill-button" type="button" disabled>Fill fields</button>
+      <button id="clear" class="clear-button" type="button" disabled>Clear</button>
+    </div>
+
+    <div class="status-card" role="status" aria-live="polite"><span class="status-dot"></span><p id="status">Loading profile…</p></div>
+
+    <section class="profile-link"><div><strong>Your profile</strong><small id="profile-summary">No profile saved yet</small></div><button id="open-options" type="button">Edit profile <span aria-hidden="true">›</span></button></section>
+
+    <footer class="privacy"><span aria-hidden="true">◆</span><p>Stored locally. Never submits forms or fills passwords, payment, or credential fields.</p></footer>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>
