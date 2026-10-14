@@ -1,19 +1,49 @@
 
+## Project Structure
+
+```text
+www2cli/
+├── README.md
+├── background/
+│   └── service-worker.js
+├── commands/
+│   ├── dom.js
+│   ├── extraction.js
+│   ├── forms.js
+│   ├── index.js
+│   └── navigation.js
+├── content/
+│   ├── content.js
+│   └── terminal.js
+├── icons/
+│   ├── icon16.png
+│   ├── icon32.png
+│   ├── icon48.png
+│   └── icon128.png
+├── screenshot/
+│   ├── terminal.jpg
+│   ├── terminal1.png
+│   └── terminal2.jpg
+├── styles/
+│   └── terminal.css
+└── manifest.json
+```
+
 ## Screenshots
 
 <table>
   <tr>
     <td align="center">
-      <img src="screenshot/interface-1.png" alt="www2CLI interface 1" width="300"><br>
+      <img src="screenshot/terminal.jpg" alt="Terminal" width="300"><br>
       <strong>Terminal</strong>
     </td>
     <td align="center">
-      <img src="screenshot/interface-2.png" alt="www2CLI interface 2" width="300"><br>
-      <strong>Page Commands</strong>
+      <img src="screenshot/terminal1.jpg" alt="Interface" width="300"><br>
+      <strong>Interface</strong>
     </td>
     <td align="center">
-      <img src="screenshot/interface-3.png" alt="www2CLI interface 3" width="300"><br>
-      <strong>Theme</strong>
+      <img src="screenshot/terminal2.jpg" alt="Commands" width="300"><br>
+      <strong>Commands</strong>
     </td>
   </tr>
 </table>
