@@ -21,11 +21,11 @@ It helps you focus on the content you actually want to see—without manually cl
 <table>
   <tr>
     <td align="center" valign="top">
-      <img src="screenshot/popup-block.png" alt="Popup blocking" width="320"><br>
+      <img src="screenshot/image.png" alt="Popup blocking" width="320"><br>
       <sub><strong>1. Block Pop-ups</strong></sub>
     </td>
     <td align="center" valign="bottom">
-      <img src="screenshot/blur-remove.png" alt="Blur removal" width="320"><br>
+      <img src="screenshot/image1.png" alt="Blur removal" width="320"><br>
       <sub><strong>2. Remove Blur</strong></sub>
     </td>
   </tr>
@@ -53,31 +53,27 @@ It helps you focus on the content you actually want to see—without manually cl
 2. Open Chrome and go to `chrome://extensions`.
 3. Turn on **Developer mode**.
 4. Click **Load unpacked**.
-5. Select the `SlimeView4` folder.
+5. Select the `slimeView` folder.
 
 ## Project Structure
 
 ```text
-SlimeView4/
+slimeView/
 ├── README.md
-├── background/
-│   └── service-worker.js
-├── content/
-│   └── content.js
-├── popup/
-│   ├── popup.html
-│   ├── popup.css
-│   └── popup.js
+├── background.js
+├── content.js
+├── popup.html
+├── popup.css
+├── popup.js
+├── manifest.json
 ├── icons/
 │   ├── icon16.png
 │   ├── icon32.png
 │   ├── icon48.png
 │   └── icon128.png
-├── screenshot/
-│   ├── popup-block.png
-│   ├── blur-remove.png
-│   └── settings.png
-└── manifest.json
+└── screenshot/
+    ├── image.png
+    └── image1.png
 ```
 
 ## Important
@@ -88,4 +84,6 @@ Use SlimeView4 only on pages you own or have permission to modify. It is intende
 
 SlimeView4 does not collect or send your browsing data. It only interacts with the current page when you use its features.
 
-##
+## Author
+
+Created by [@rootadbc](https://github.com/rootadbc)
