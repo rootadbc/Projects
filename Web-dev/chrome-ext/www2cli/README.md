@@ -1,59 +1,27 @@
-
-## Project Structure
-
-```text
-www2cli/
-├── README.md
-├── background/
-│   └── service-worker.js
-├── commands/
-│   ├── dom.js
-│   ├── extraction.js
-│   ├── forms.js
-│   ├── index.js
-│   └── navigation.js
-├── content/
-│   ├── content.js
-│   └── terminal.js
-├── icons/
-│   ├── icon16.png
-│   ├── icon32.png
-│   ├── icon48.png
-│   └── icon128.png
-├── screenshot/
-│   ├── terminal.jpg
-│   ├── terminal1.png
-│   └── terminal2.jpg
-├── styles/
-│   └── terminal.css
-└── manifest.json
-```
-
-## Screenshots
-
-<table>
-  <tr>
-    <td align="center">
-      <img src="screenshot/terminal.jpg" alt="Terminal" width="300"><br>
-      <strong>Terminal</strong>
-    </td>
-    <td align="center">
-      <img src="screenshot/terminal1.jpg" alt="Interface" width="300"><br>
-      <strong>Interface</strong>
-    </td>
-    <td align="center">
-      <img src="screenshot/terminal2.jpg" alt="Commands" width="300"><br>
-      <strong>Commands</strong>
-    </td>
-  </tr>
-</table>
-
 # www2CLI
 
 www2CLI is a Chrome extension that adds a Linux-inspired command-line interface on top of the current website.
 
 The original website stays fully visible and interactive. The CLI appears as a floating terminal you can use to navigate, inspect, and extract information from the page.
 
+## Screenshots
+
+<table>
+  <tr>
+    <td align="center" valign="top">
+      <img src="screenshot/terminal.png" alt="Terminal" width="270"><br>
+      <sub><strong>x.com terminal</strong></sub>
+    </td>
+    <td align="center" valign="middle">
+      <img src="screenshot/terminal1.png" alt="Interface" width="270"><br>
+      <sub><strong>YouTube terminal</strong></sub>
+    </td>
+    <td align="center" valign="bottom">
+      <img src="screenshot/terminal2.png" alt="Commands" width="270"><br>
+      <sub><strong>Instagram terminal</strong></sub>
+    </td>
+  </tr>
+</table>
 ## Features
 
 - Floating, draggable terminal overlay
@@ -91,7 +59,37 @@ close
 2. Open Chrome and go to `chrome://extensions`.
 3. Turn on **Developer mode**.
 4. Click **Load unpacked**.
-5. Select the www2cli folder.
+5. Select the `www2cli` folder.
+
+## Project Structure
+
+```text
+www2cli/
+├── README.md
+├── background/
+│   └── service-worker.js
+├── commands/
+│   ├── dom.js
+│   ├── extraction.js
+│   ├── forms.js
+│   ├── index.js
+│   └── navigation.js
+├── content/
+│   ├── content.js
+│   └── terminal.js
+├── icons/
+│   ├── icon16.png
+│   ├── icon32.png
+│   ├── icon48.png
+│   └── icon128.png
+├── screenshot/
+│   ├── terminal.png
+│   ├── terminal1.png
+│   └── terminal2.png
+├── styles/
+│   └── terminal.css
+└── manifest.json
+```
 
 ## Privacy
 
