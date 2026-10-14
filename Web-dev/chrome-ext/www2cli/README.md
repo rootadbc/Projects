@@ -1,3 +1,23 @@
+
+## Screenshots
+
+<table>
+  <tr>
+    <td align="center">
+      <img src="screenshot/interface-1.png" alt="www2CLI interface 1" width="300"><br>
+      <strong>Terminal</strong>
+    </td>
+    <td align="center">
+      <img src="screenshot/interface-2.png" alt="www2CLI interface 2" width="300"><br>
+      <strong>Page Commands</strong>
+    </td>
+    <td align="center">
+      <img src="screenshot/interface-3.png" alt="www2CLI interface 3" width="300"><br>
+      <strong>Theme</strong>
+    </td>
+  </tr>
+</table>
+
 # www2CLI
 
 www2CLI is a Chrome extension that adds a Linux-inspired command-line interface on top of the current website.
