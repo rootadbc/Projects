@@ -1,15 +1,51 @@
-# SlimeView
+# SlimeView4
 
-SlimeView4 is a Chrome extension that helps remove annoying pop-ups and blur effects from web pages.
+SlimeView4 is a Chrome extension that cleans up distracting web pages by blocking common pop-ups and removing blur effects.
 
-It can hide common pop-ups, overlays, and dialogs, and remove CSS blur from page content.
+It helps you focus on the content you actually want to see—without manually closing overlays or fighting blurred text.
+
+## Workflow
+
+```text
+1. Open a webpage
+        ↓
+2. Detect pop-ups and blur
+        ↓
+3. Block or remove them
+        ↓
+4. Read the content clearly
+```
+
+## Screenshots
+
+<table>
+  <tr>
+    <td align="center" valign="top">
+      <img src="screenshot/popup-block.png" alt="Popup blocking" width="320"><br>
+      <sub><strong>1. Block Pop-ups</strong></sub>
+    </td>
+    <td align="center" valign="bottom">
+      <img src="screenshot/blur-remove.png" alt="Blur removal" width="320"><br>
+      <sub><strong>2. Remove Blur</strong></sub>
+    </td>
+  </tr>
+</table>
 
 ## Features
 
-- Hide common pop-ups and overlays
-- Remove blur effects
-- Enable text selection
+- Blocks common pop-ups, overlays, and dialogs
+- Removes CSS blur effects from page content
+- Enables text selection where possible
 - Simple popup interface
+- Lightweight and privacy-focused
+- Works entirely in the browser
+
+## How It Works
+
+1. Open any webpage.
+2. Click the SlimeView4 icon.
+3. Choose **Block pop-ups** or **Remove blur**.
+4. The page is cleaned instantly.
 
 ## Installation
 
@@ -17,12 +53,39 @@ It can hide common pop-ups, overlays, and dialogs, and remove CSS blur from page
 2. Open Chrome and go to `chrome://extensions`.
 3. Turn on **Developer mode**.
 4. Click **Load unpacked**.
-5. Select the SlimeView folder.
+5. Select the `SlimeView4` folder.
+
+## Project Structure
+
+```text
+SlimeView4/
+├── README.md
+├── background/
+│   └── service-worker.js
+├── content/
+│   └── content.js
+├── popup/
+│   ├── popup.html
+│   ├── popup.css
+│   └── popup.js
+├── icons/
+│   ├── icon16.png
+│   ├── icon32.png
+│   ├── icon48.png
+│   └── icon128.png
+├── screenshot/
+│   ├── popup-block.png
+│   ├── blur-remove.png
+│   └── settings.png
+└── manifest.json
+```
 
 ## Important
 
-Use this extension only on pages you own or have permission to modify. It is intended for cleaning up your own browsing experience, not bypassing paywalls or access controls.
+Use SlimeView4 only on pages you own or have permission to modify. It is intended to improve your own browsing experience, not to bypass paywalls, authentication, or access controls.
 
-## Author
+## Privacy
 
-Created by [@rootadbc](https://github.com/rootadbc)
+SlimeView4 does not collect or send your browsing data. It only interacts with the current page when you use its features.
+
+##
