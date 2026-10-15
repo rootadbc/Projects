@@ -1,4 +1,4 @@
-# SlimeView4
+# SlimeView
 
 SlimeView4 is a Chrome extension that cleans up distracting web pages by blocking common pop-ups and removing blur effects.
 
