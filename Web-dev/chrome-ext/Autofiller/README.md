@@ -4,36 +4,41 @@ Autofiller is a Chrome extension that turns repetitive form filling into a simpl
 
 Instead of retyping the same details across sign-ups, applications, and checkout forms, Autofiller detects fields, applies your saved profile, and lets you review before submitting.
 
-## Workflow
+<td align="center" width="53%" style="text-align: center;">
+  <div align="center">
+    <img
+      src="banner/autofiller.jpg"
+      alt="Autofiller images"
+      width="670"
+      style="display: block; margin: 0 auto; border-radius: 12px;"
+    />
+  </div>
+  <br>
+</td>
 
-```text
-1. Detect form fields
-        ↓
-2. Save your profile
-        ↓
-3. Autofill with one click
-        ↓
-4. Review and submit
-```
 
-## Screenshots
+## 🔄 How It Works
+
+<div align="center">
 
 <table>
   <tr>
-    <td align="center" valign="top">
-      <img src="screenshot/form-detect.png" alt="Form detection" width="270"><br>
-      <sub><strong>1. Detect</strong></sub>
+    <td align="center" width="23%">
+      <img src="screenshot/form-detect.png" alt="Autofiller detects form fields" width="270" style="border-radius: 12px;" /><br><br>
+      <sub><strong>🔍 1. Detect</strong><br>Identifies form fields automatically</sub>
     </td>
-    <td align="center" valign="middle">
-      <img src="screenshot/autofill.png" alt="Autofill form" width="270"><br>
-      <sub><strong>2. Autofill</strong></sub>
+    <td align="center" width="23%">
+      <img src="screenshot/autofill.png" alt="Autofiller fills the form" width="270" style="border-radius: 12px;" /><br><br>
+      <sub><strong>⚡ 2. Autofill</strong><br>Fills supported fields instantly</sub>
     </td>
-    <td align="center" valign="bottom">
-      <img src="screenshot/image.png" alt="Autofiller interface" width="270"><br>
-      <sub><strong>3. Manage</strong></sub>
+    <td align="center" width="23%">
+      <img src="screenshot/image.png" alt="Autofiller management interface" width="270" style="border-radius: 12px;" /><br><br>
+      <sub><strong>⚙️ 3. Manage</strong><br>Control your saved profile data</sub>
     </td>
   </tr>
 </table>
+
+</div>
 
 ## Features
 
