@@ -4,20 +4,20 @@ SlimeView4 is a Chrome extension that cleans up distracting web pages by blockin
 
 It helps you focus on the content you actually want to see—without manually closing overlays or fighting blurred text.
 
-## Workflow
+<td align="center" width="53%" style="text-align: center;">
+  <div align="center">
+    <img
+      src="banner/slimeview.jpeg"
+      alt="Autofiller images"
+      width="670"
+      style="display: block; margin: 0 auto; border-radius: 12px;"
+    />
+  </div>
+  <br>
+</td>
 
-```text
-1. Open a webpage
-        ↓
-2. Detect pop-ups and blur
-        ↓
-3. Block or remove them
-        ↓
-4. Read the content clearly
-```
 
-## Screenshots
-
+## 🔄 How It Works
 <table>
   <tr>
     <td align="center" valign="top">
