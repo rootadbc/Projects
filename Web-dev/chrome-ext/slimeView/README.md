@@ -78,11 +78,11 @@ slimeView/
 
 ## Important
 
-Use SlimeView4 only on pages you own or have permission to modify. It is intended to improve your own browsing experience, not to bypass paywalls, authentication, or access controls.
+Use SlimeView only on pages you own or have permission to modify. It is intended to improve your own browsing experience, not to bypass paywalls, authentication, or access controls.
 
 ## Privacy
 
-SlimeView4 does not collect or send your browsing data. It only interacts with the current page when you use its features.
+SlimeView does not collect or send your browsing data. It only interacts with the current page when you use its features.
 
 ## Author
 
